@@ -43,7 +43,7 @@ if module.params['instance_name'] is not None:
 
     attach_node = driver.ex_get_node(name=module.params['instance_name'], zone=module.params['zone'])
 
-    driver.attach_volume(node=attach_node, volume=volume)
+    driver.attach_volume(node=attach_node, volume=volume, ex_mode=module.params['mode'])
 
 
 
